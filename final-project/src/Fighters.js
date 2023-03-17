@@ -1,12 +1,18 @@
 import './App.css';
-//import PageListPokemon from './PageListPokemon';
-import ListPokemon from './ListPokemon';
+import PageListPokemon from './PageListPokemon';
 import FinalFighters from './FinalFighters';
 import React, {useState} from 'react';
 // import ListPageDisperse from './ListPageDisperse';
 // import smallerPoke from './data/smallerPoke.json';
+// copy of choosepokefighters
 
-function ChoosePokeFighters({teamA, teamB, handleButtonClickAddAlpha, handleButtonClickAddBravo}) {
+function Fighters(props) {
+  Fighters.defaultProps = {
+    teamName: '',
+  };
+  Fighters.propTypes = {
+    teamName: PropTypes.string,
+  };
 
   const [fightingPokemonArr, setPokemontoFightArr] = useState(['empty']);
   /**
@@ -54,21 +60,17 @@ function ChoosePokeFighters({teamA, teamB, handleButtonClickAddAlpha, handleButt
   }; // end function refModCart(vacaElement)  
   return (
     <div className="App">
-      <ListPokemon 
-        teamA = {teamA}
-        teamB = {teamB}
-        handleButtonClickAddAlpha = {handleButtonClickAddAlpha}
-        handleButtonClickAddBravo = {handleButtonClickAddBravo}>
-      </ListPokemon>
+      <FinalFighters
+        fightingPokemonArr = {fightingPokemonArr}
+        refSetPokemonFight = {refSetPokemonFight}>
+      </FinalFighters>
     </div>
   );
 }
 
-export default ChoosePokeFighters;
+export default Fighters;
 
 // <PageListPokemon/>
-/*
-<PageListPokemon 
-        refSetPokemonFight = {refSetPokemonFight}>
-      </PageListPokemon>
-*/
+// <PageListPokemon 
+// refSetPokemonFight = {refSetPokemonFight}>
+// </PageListPokemon>

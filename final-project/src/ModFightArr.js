@@ -29,7 +29,7 @@ function ModFightArr(props) {
     }, [fighting]);
 
   if (fighting || props.alreadyAdded) {
-    buttonType = '+';
+    buttonType = ':';
   } else {
     buttonType = '-';
   }
