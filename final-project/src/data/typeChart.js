@@ -1,4 +1,4 @@
-const typeReference = [
+export const typeReference = [
     {	"type": 	"Grass Poison",   "colRow": 0	},
     {	"type": 	"Fire",           "colRow": 1	},
     {	"type": 	"Normal",         "colRow": 2	},

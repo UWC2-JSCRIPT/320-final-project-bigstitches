@@ -1,17 +1,64 @@
-export const initialState = [{name: '', type: '', ability: '' }];
+function eachAbilityCompare(abilityMultiplier) {
+  switch (abilityMultiplier) {
+    case 'Grass Poison':
+      //
+      break;
+    case 'Fire':
+      //
+      break;
+    case 'Fire Flying':
+      //
+      break;
+    case 'Fire Flying':
+        //
+      break;
+    case 'Water':
+          //
+      break;
+    case 'Bug':
+        //
+      break;
+    case 'Bug Flying':
+        //
+      break;
+    case 'Normal Flying':
+        //
+      break;
+    case 'Normal':
+          //
+      break;
+    case 'Poison':
+            //
+      break;
 
-export function pokemonArrayReducer(state, action) {
-  console.log(action.type + ' ' + action.pokeElement.name);
-  switch (action.type) {
-    case 'remove_Pokemon': {
-      return state.filter((a) => a.name !== action.pokeElement.name);
-    }
-    case 'add_Pokemon': {
-      return [].concat(state,[action.pokeElement]);
-    }
-    default: {
-      throw Error('Unknown action: ' + action.type);
-    }
+
+    case 'Electric':
+        //
+      break;
+    case 'Ground':
+        //
+      break;
+    case 'Poison Ground':
+          //
+      break;
+    case 'Fairy':
+            //
+      break;
+    default:
+      break;
+  }
+}
+
+export function compareFight(teamA, teamB) {
+  let arrRow = new Array(3);
+  let arrCol = new Array(3);
+
+  
+
+  for (let i = 0; i < 4; i++) {
+    teamB.forEach((element) => {
+      teamA[i].ability
+    });
   }
 } // end function 
 
